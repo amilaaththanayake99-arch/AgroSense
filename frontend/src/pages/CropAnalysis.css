@@ -1,0 +1,1379 @@
+.crop-analysis-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 0.5rem auto;
+}
+
+.crop-form-layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+  width: 100%;
+}
+
+/* Main Crop Form Card */
+.main-crop-form-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.form-header-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1.5px solid var(--border-color);
+}
+
+.form-header-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--primary-subtle);
+  border: 1.5px solid var(--primary-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.form-header-bar h2 {
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.html-crop-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.form-group-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-lbl {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Clean Land Photo Upload Button */
+.clean-land-upload-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.1rem;
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: var(--radius-md);
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.clean-land-upload-btn:hover {
+  background: var(--primary-subtle);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.land-uploaded-mini-box {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #f8fafc;
+  border: 1.5px solid var(--border-color);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.land-thumb-img {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 1.5px solid var(--primary);
+  flex-shrink: 0;
+}
+
+.land-filename {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remove-land-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--danger-subtle);
+  border: 1px solid var(--danger-border);
+  color: var(--danger);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.remove-land-btn:hover {
+  background: var(--danger);
+  color: #ffffff;
+}
+
+.html-crop-form input[type="number"],
+.html-crop-form select {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.submit-form-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-top: 0.75rem;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
+}
+
+/* Evaluation Result Card */
+.evaluation-result-card {
+  background: #ffffff;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.eval-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1.5px solid var(--border-color);
+}
+
+.score-badge-circle {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+
+.score-num {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.score-text {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.eval-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.eval-crop-title {
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin-top: 0.2rem;
+}
+
+.eval-location-subtitle {
+  font-size: 0.92rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.eval-analysis-box {
+  background: #f8fafc;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.eval-analysis-box h3 {
+  font-size: 1.12rem;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.eval-analysis-box p {
+  font-size: 0.98rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* Alternatives Box */
+.eval-alternatives-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alt-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.alt-title-row h3 {
+  font-size: 1.15rem;
+  color: #0f172a;
+}
+
+.eval-alt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .eval-alt-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.alt-item-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.alt-item-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.1);
+}
+
+.alt-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alt-name-txt {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.alt-pct {
+  background: var(--primary-subtle);
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.alt-desc-txt {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.alt-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: var(--primary-subtle);
+  color: var(--primary-dark);
+  border: 1.5px solid var(--primary-border);
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.alt-switch-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* District & GPS Selector */
+.label-with-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detect-gps-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.detect-gps-btn:hover {
+  background: var(--primary-subtle);
+  color: var(--primary-dark);
+  border-color: var(--primary);
+}
+
+.district-select {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: #0f172a;
+  background: #ffffff;
+  outline: none;
+  cursor: pointer;
+}
+
+.district-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.form-sub-txt {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 0.2rem;
+}
+
+/* Match Score Colors */
+.score-badge-circle.score-good {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+}
+
+.score-badge-circle.score-bad {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+}
+
+.badge-danger {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  font-weight: 700;
+}
+
+/* Unsuitable Reasons Box */
+.unsuitable-reasons-box {
+  background: #fff5f5;
+  border: 1.5px solid #fecaca;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.unsuitable-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.unsuitable-title-row h4 {
+  font-size: 1.05rem;
+  color: #991b1b;
+  font-weight: 700;
+}
+
+.unsuitable-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.unsuitable-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: #7f1d1d;
+  line-height: 1.45;
+}
+
+.bullet-cross {
+  color: #dc2626;
+  font-weight: 800;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Financial & Harvest Breakdown Grid */
+.financial-harvest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .financial-harvest-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .financial-harvest-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.financial-card {
+  background: #f8fafc;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.fin-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-cal { background: #e0f2fe; color: #0284c7; }
+.icon-money { background: #fef3c7; color: #d97706; }
+.icon-cost { background: #f1f5f9; color: #475569; }
+.icon-profit { background: #dcfce7; color: #16a34a; }
+
+.fin-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.fin-val {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0.2rem 0;
+}
+
+.fin-sub {
+  display: block;
+  font-size: 0.76rem;
+  color: #94a3b8;
+}
+
+/* Alternative Crop Highlights */
+.alt-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.alt-badge {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.alt-sub-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+/* Comprehensive Step-by-Step Cultivation Guide */
+.cultivation-guide-section {
+  background: #ffffff;
+  border: 1.5px solid var(--primary-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.06);
+}
+
+.guide-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid var(--border-color);
+  padding-bottom: 1.15rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.guide-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.guide-title-wrapper h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 0.15rem;
+}
+
+.guide-title-wrapper p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.guide-meta-chip {
+  display: flex;
+  gap: 0.75rem;
+  background: var(--primary-subtle);
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: var(--primary-dark);
+}
+
+.guide-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-stage-card {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.stage-marker-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stage-icon-bubble {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+}
+
+.timeline-line {
+  width: 2px;
+  flex-grow: 1;
+  background: #e2e8f0;
+  margin: 0.35rem 0;
+}
+
+.stage-content-card {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.35rem;
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+}
+
+.stage-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stage-header-row h4 {
+  font-size: 1.05rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.stage-duration-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.stage-tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.stage-tasks-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.task-bullet {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Market Economics & Price Assessment Card */
+.market-assessment-card {
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.market-assessment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.market-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.market-title-wrap h4 {
+  font-size: 1.05rem;
+  color: #0f172a;
+  font-weight: 700;
+  margin: 0;
+}
+
+.market-status-chip {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.market-status-chip.market-good {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.market-status-chip.market-bad {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.market-notes-txt {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.market-metrics-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.metric-pill {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.metric-pill span {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.metric-pill strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.metric-sub-note {
+  font-size: 0.82rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* In-form active loading state */
+.eval-active-form-loading {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+  padding: 1.1rem 1.4rem;
+  border-radius: var(--radius-md);
+  margin-top: 0.5rem;
+}
+
+.form-loading-spinner-ring {
+  width: 32px;
+  height: 32px;
+  border: 3.5px solid #bbf7d0;
+  border-top-color: #16a34a;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+.form-loading-txt strong {
+  display: block;
+  font-size: 0.98rem;
+  color: #14532d;
+  margin-bottom: 0.2rem;
+}
+
+.form-loading-txt p {
+  font-size: 0.84rem;
+  color: #166534;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* In-form Evaluation Success Jump Banner */
+.eval-success-jump-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+  border: 2px solid #22c55e;
+  padding: 1.15rem 1.4rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.15);
+  transition: all 0.2s ease;
+}
+
+.eval-success-jump-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.25);
+  border-color: #16a34a;
+}
+
+.eval-jump-left {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.eval-jump-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.eval-jump-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+}
+
+.eval-jump-sub {
+  font-size: 0.86rem;
+  color: #475569;
+  margin: 0;
+}
+
+.btn-jump-results {
+  background: #16a34a;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+  transition: background 0.15s ease;
+}
+
+.btn-jump-results:hover {
+  background: #15803d;
+}
+
+.submit-form-btn.has-results {
+  background: #0f766e;
+  border-color: #0d9488;
+}
+
+.submit-form-btn.has-results:hover {
+  background: #115e59;
+}
+
+/* =========================================================
+   Nationwide Market Assessment & Dedicated Economic Centers
+   ========================================================= */
+.market-subtitle-note {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+
+.national-outlook-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #0284c7;
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-sm);
+  margin-top: 0.75rem;
+}
+
+.national-outlook-box strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #0369a1;
+  margin-bottom: 0.2rem;
+}
+
+.national-outlook-box p {
+  font-size: 0.88rem;
+  color: #334155;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.national-price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.price-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+.price-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.price-card.manning-card {
+  border-left: 4px solid #3b82f6;
+  background: #f8faff;
+}
+
+.price-card.dambulla-card {
+  border-left: 4px solid #10b981;
+  background: #f6fdf9;
+}
+
+.price-card.regional-card {
+  border-left: 4px solid #f59e0b;
+  background: #fffdf5;
+}
+
+.price-card.supermarket-card {
+  border-left: 4px solid #8b5cf6;
+  background: #faf8ff;
+}
+
+.price-card.retail-card {
+  border-left: 4px solid #ec4899;
+  background: #fff8fb;
+}
+
+.price-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hub-city {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.hub-role {
+  font-size: 0.76rem;
+  color: #64748b;
+}
+
+.price-card .price-val {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+  background: #ffffff;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.market-extra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.strategy-card {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.strategy-card.policy-card {
+  background: #fefce8;
+  border-color: #fef08a;
+}
+
+.strategy-card h5 {
+  font-size: 0.88rem;
+  color: #14532d;
+  margin: 0 0 0.35rem 0;
+  font-weight: 700;
+}
+
+.strategy-card.policy-card h5 {
+  color: #854d0e;
+}
+
+.strategy-card p {
+  font-size: 0.85rem;
+  color: #334155;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   DOA Official Crop Specifications Bar
+   ========================================================= */
+.crop-specs-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.85rem;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.spec-lbl {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.spec-val {
+  font-size: 0.88rem;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   Stage Highlight Boxes (Fertilizer, IPM, Water)
+   ========================================================= */
+.stage-detail-box {
+  margin-top: 0.85rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.87rem;
+  line-height: 1.45;
+}
+
+.stage-detail-box .box-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.86rem;
+}
+
+.stage-detail-box.fert-box {
+  background: #fdf4ff;
+  border: 1px solid #f0abfc;
+  color: #701a75;
+}
+
+.stage-detail-box.fert-box strong {
+  color: #86198f;
+}
+
+.stage-detail-box.fert-box p {
+  color: #4a044e;
+  margin: 0;
+}
+
+.stage-detail-box.ipm-box {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #9a3412;
+}
+
+.stage-detail-box.ipm-box strong {
+  color: #c2410c;
+}
+
+.stage-detail-box.ipm-box p {
+  color: #7c2d12;
+  margin: 0;
+}
+
+.stage-detail-box.water-box {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+}
+
+.stage-detail-box.water-box strong {
+  color: #1d4ed8;
+}
+
+.stage-detail-box.water-box p {
+  color: #1e3a8a;
+  margin: 0;
+}
+
+.btn-print-roadmap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.btn-print-roadmap:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .top-header-minimal,
+  .main-crop-form-card,
+  .chat-panel-wrapper,
+  .page-header,
+  .btn-print-roadmap,
+  .alt-switch-btn,
+  .eval-success-jump-banner {
+    display: none !important;
+  }
+  .crop-analysis-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  .page-content-grid {
+    display: block !important;
+  }
+  .cultivation-guide-section {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .timeline-stage-card {
+    page-break-inside: avoid;
+  }
+}
+
+/* Recommended Target Action Card */
+.recommended-target-action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+  border: 2px solid #a7f3d0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.08);
+  margin-top: 0.5rem;
+}
+
+.rec-action-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rec-status-tag {
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #065f46;
+  background: #d1fae5;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+.rec-action-info h4 {
+  font-size: 1.35rem;
+  color: #064e3b;
+  margin: 0;
+}
+
+.rec-action-info p {
+  font-size: 0.92rem;
+  color: #047857;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.rec-action-divider {
+  height: 1.5px;
+  background: #a7f3d0;
+  width: 100%;
+}
+
+.rec-action-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.btn-view-target-crop {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #059669;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.85rem 1.6rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-view-target-crop:hover {
+  background: #047857;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.35);
+}
+
+/* Dossier Container for Selected Crop Details */
+.selected-crop-dossier {
+  margin-top: 2rem;
+  background: #ffffff;
+  border: 2px solid #3b82f6;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dossier-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid #e2e8f0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.dossier-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dossier-title-row h3 {
+  font-size: 1.35rem;
+  color: #0f172a;
+  margin: 0;
+}
+
+.highlight-crop-name {
+  color: #2563eb;
+  font-weight: 800;
+}
+
+.dossier-sub-note {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin: 0.25rem 0 0 0;
+}
+
+.dossier-close-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  color: #475569;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dossier-close-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .recommended-target-action-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-view-target-crop {
+    width: 100%;
+  }
+  .national-price-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+

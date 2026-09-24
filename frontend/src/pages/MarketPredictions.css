@@ -1,0 +1,149 @@
+.market-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.market-controls {
+  padding: 1.75rem 2rem;
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.prediction-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .prediction-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.price-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 800px) {
+  .price-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.price-card {
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.price-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  background: var(--primary-subtle);
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.price-icon-wrapper.highlight {
+  background: var(--info-subtle);
+  color: var(--info);
+}
+
+.price-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.price-value {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+.price-card.trend-up .price-icon-wrapper {
+  background: var(--success-subtle);
+  color: var(--success);
+}
+
+.price-card.trend-down .price-icon-wrapper {
+  background: var(--danger-subtle);
+  color: var(--danger);
+}
+
+.chart-section {
+  padding: 2rem;
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.css-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 200px;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--border-color);
+  gap: 1rem;
+}
+
+.chart-bar-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.chart-bar {
+  width: 100%;
+  max-width: 44px;
+  background: linear-gradient(180deg, var(--primary-light), var(--primary));
+  border-radius: 6px 6px 0 0;
+  transition: height 0.5s ease;
+  position: relative;
+}
+
+.chart-bar.latest-bar {
+  background: linear-gradient(180deg, var(--secondary-light), var(--secondary));
+}
+
+.chart-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.recommendation-card {
+  padding: 1.75rem;
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}

@@ -1,0 +1,454 @@
+.profile-page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  margin-bottom: 2rem;
+}
+
+.profile-header h1 {
+  font-size: 2.1rem;
+  color: var(--text-primary);
+}
+
+.profile-header p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.save-toast {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: var(--success-subtle);
+  border: 1.5px solid #bbf7d0;
+  color: var(--success);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+}
+
+/* 2-Column Grid matching Wireframe 2 */
+.profile-layout-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .profile-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left Card: Circle Face + "Hi Amila" */
+.profile-face-card {
+  padding: 2.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1.5px solid var(--border-color);
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.avatar-circle-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+/* Wireframe "profile face" circle */
+.large-profile-circle {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  padding: 4px;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+}
+
+.profile-face-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.change-photo-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 38px;
+  height: 38px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.change-photo-badge:hover {
+  background: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+/* "Hi Amila" Text from wireframe */
+.greeting-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.greeting-title {
+  font-size: 1.65rem;
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+.quick-farmer-stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.f-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-main);
+  border-radius: var(--radius-md);
+}
+
+.f-stat-icon {
+  flex-shrink: 0;
+}
+
+.f-stat-val {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  display: block;
+  line-height: 1.2;
+}
+
+.f-stat-lbl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.primary-crops-preview {
+  width: 100%;
+  text-align: left;
+}
+
+.primary-crops-preview h4 {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+.crop-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.crop-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--primary-subtle);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-border);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Right Form Card */
+.profile-details-card {
+  padding: 2.25rem;
+  border: 1.5px solid var(--border-color);
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-top-bar h3 {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+}
+
+.edit-toggle-btn {
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.edit-toggle-btn:hover, .edit-toggle-btn.active {
+  background: var(--primary-subtle);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.form-field-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.profile-input {
+  font-size: 0.95rem;
+}
+
+.profile-input:disabled {
+  background: #f8fafc;
+  color: var(--text-primary);
+  border-color: #e2e8f0;
+  cursor: default;
+  font-weight: 500;
+}
+
+.form-fields-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .form-fields-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-actions-bar {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-btn {
+  padding: 0.85rem 1.75rem;
+  font-size: 1rem;
+}
+
+/* ================= PHOTO CHANGE MODAL ================= */
+.photo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1.5rem;
+}
+
+.photo-modal-card {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: 1.5px solid var(--border-color);
+  animation: modalScaleIn 0.25s ease-out;
+}
+
+@keyframes modalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.photo-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: #f8fafc;
+}
+
+.photo-modal-title-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.photo-modal-title-box h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.photo-modal-close {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.photo-modal-close:hover {
+  background: #e2e8f0;
+  color: var(--text-primary);
+}
+
+.photo-modal-body {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.35rem;
+}
+
+.modal-preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-preview-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.25);
+}
+
+.modal-preview-caption {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.photo-upload-action-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.upload-device-btn {
+  width: 100%;
+  padding: 0.95rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.28);
+}
+
+.upload-note {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: center;
+}
+
+.photo-modal-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.reset-photo-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.reset-photo-btn:hover {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.08);
+}
+

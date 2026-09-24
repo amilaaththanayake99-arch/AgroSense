@@ -1,0 +1,98 @@
+.public-landing-container {
+  min-height: calc(100vh - 80px); /* Adjust based on header height */
+  width: 100%;
+  background-image: url('/assets/farmer_hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.public-landing-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.5) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.public-landing-content {
+  max-width: 800px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.welcome-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.95rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.public-title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.public-title .highlight {
+  color: var(--primary);
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.public-subtitle {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.public-cta-btn {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-lg);
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+}
+
+.public-cta-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+}
+
+@media (max-width: 768px) {
+  .public-title {
+    font-size: 2.5rem;
+  }
+  .public-subtitle {
+    font-size: 1.1rem;
+  }
+}
